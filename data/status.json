@@ -1,5 +1,14 @@
 {
-  "status": "operational",
-  "lastUpdated": "2026-02-12T20:21:00Z",
-  "version": "1.0.0"
+  "minVersion": "1.0.0",
+  "currentVersion": "1.0.0",
+  "releaseDate": "2026-02-12T12:00:00Z",
+  "securityBulletin": {
+    "criticalUpdate": false,
+    "severity": "low",
+    "bulletinTitle": "Systems Nominal",
+    "bulletinMessage": "Immunity protection is active.",
+    "actionUrl": ""
+  },
+  "maintenanceMode": false,
+  "maintenanceMessage": ""
 }

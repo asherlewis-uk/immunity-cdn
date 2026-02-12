@@ -1,41 +1,34 @@
-name: Validate JSON Files
+name: Validate Immunity Data
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main" ]
+    paths:
+      - 'data/**.json'
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main" ]
+    paths:
+      - 'data/**.json'
 
 jobs:
-  validate:
+  validate-json:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Validate status.json
-      run: |
-        echo "Validating status.json..."
-        cat data/status.json | python3 -m json.tool > /dev/null
-        echo "✓ status.json is valid"
+      - uses: actions/checkout@v3
+
+      - name: Install JSON Linter
+        run: sudo npm install -g jsonlint
+
+      - name: Validate Status JSON
+        run: jsonlint -q data/status.json
         
-    - name: Validate blocklist.json
-      run: |
-        echo "Validating blocklist.json..."
-        cat data/blocklist.json | python3 -m json.tool > /dev/null
-        echo "✓ blocklist.json is valid"
-        
-    - name: Validate certs.json
-      run: |
-        echo "Validating certs.json..."
-        cat data/certs.json | python3 -m json.tool > /dev/null
-        echo "✓ certs.json is valid"
-        
-    - name: Validation Summary
-      run: |
-        echo "========================================="
-        echo "All JSON files validated successfully!"
-        echo "========================================="
+      - name: Validate Blocklist JSON
+        run: jsonlint -q data/blocklist.json
+
+      - name: Validate Certs JSON
+        run: jsonlint -q data/certs.json
+
+      - name: Verify Cert Format (Simple Regex)
+        run: |
+          # Checks that all SHA256 hashes are exactly 64 characters of hex
+          grep -o '"sha256": "[^"]*"' data/certs.json | awk -F'"' '{print $4}' | grep -vE '^[A-Fa-f0-9]{64}$' && exit 1 || echo "All cert hashes valid."

@@ -1,0 +1,41 @@
+name: Validate JSON Files
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Validate status.json
+      run: |
+        echo "Validating status.json..."
+        cat data/status.json | python3 -m json.tool > /dev/null
+        echo "✓ status.json is valid"
+        
+    - name: Validate blocklist.json
+      run: |
+        echo "Validating blocklist.json..."
+        cat data/blocklist.json | python3 -m json.tool > /dev/null
+        echo "✓ blocklist.json is valid"
+        
+    - name: Validate certs.json
+      run: |
+        echo "Validating certs.json..."
+        cat data/certs.json | python3 -m json.tool > /dev/null
+        echo "✓ certs.json is valid"
+        
+    - name: Validation Summary
+      run: |
+        echo "========================================="
+        echo "All JSON files validated successfully!"
+        echo "========================================="

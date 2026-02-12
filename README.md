@@ -35,4 +35,4 @@ All data files are accessible via the repository and can be consumed by Immunity
 
 ## Validation
 
-All JSON files are automatically validated on each commit to ensure data integrity.
+All JSON files are automatically validated on each commit to ensure data integrity. 

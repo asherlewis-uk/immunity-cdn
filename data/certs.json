@@ -1,5 +1,27 @@
 {
-  "certificates": [],
-  "lastUpdated": "2026-02-12T20:21:00Z",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "certs": {
+    "com.whatsapp": {
+      "vendorName": "WhatsApp Inc.",
+      "certFingerprints": [
+        {
+          "sha256": "38A0F7D505FE18FEC64FBF343ECAAAF310D79987504067FA86D710E97897228D",
+          "issued": "2010-09-14T00:00:00Z",
+          "expires": "2044-09-06T00:00:00Z",
+          "note": "Official WhatsApp Signing Key"
+        }
+      ]
+    },
+    "com.google.android.gms": {
+      "vendorName": "Google LLC",
+      "certFingerprints": [
+        {
+          "sha256": "F0FD6C5B410F25CB25C3B5334DD3892F050759080A90680072C2250965306B33",
+          "issued": "2013-08-01T00:00:00Z",
+          "expires": "2041-01-01T00:00:00Z",
+          "note": "Google Play Services Core"
+        }
+      ]
+    }
+  }
 }

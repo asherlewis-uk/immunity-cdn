@@ -1,38 +1,46 @@
-# Immunity Security CDN
+# Immunity CDN
 
-A static Content Delivery Network (CDN) repository for the Immunity security platform.
+Static threat-intelligence files served via GitHub raw content delivery.
 
-## Overview
+These files are consumed by the **Pulse Check Engine** (`src/lib/pulse.ts`) in the Immunity app. The app fetches them daily to append new certificates and blocklist domains into the local Dexie.js database (append-only, never overwrite).
 
-This repository serves as a centralized data source for Immunity security components, providing:
-- System status information
-- Security blocklists
-- Certificate data
+## Files
 
-## Structure
+| File | Schema | Purpose |
+|---|---|---|
+| `status.json` | `BulletinStatus` | Security bulletin displayed on the dashboard |
+| `certs.json` | `CdnCertificate[]` | Trusted vendor SHA-256 certificate fingerprints |
+| `blocklist.json` | `CdnBlocklistEntry[]` | Stalkerware C2 domains for DNS sinkhole |
 
+## Deployment
+
+1. Push this `cdn/` directory to a new GitHub repo: `asherlewis-uk/immunity-cdn`
+2. Files are served at: `https://raw.githubusercontent.com/asherlewis-uk/immunity-cdn/main/<file>`
+3. The Immunity app's `CDN_BASE_URL` points to this base path.
+
+## Schema Contracts
+
+### `status.json`
+```json
+{
+  "minVersion": "0.1.0",
+  "criticalUpdate": false,
+  "bulletinTitle": "...",
+  "bulletinMessage": "...",
+  "severity": "info | warning | critical"
+}
 ```
-data/
-├── status.json      # System operational status
-├── blocklist.json   # Security blocklist data
-└── certs.json       # Certificate information
+
+### `certs.json`
+```json
+[
+  { "packageName": "com.example.app", "signature": "SHA256_HEX" }
+]
 ```
 
-## Data Files
-
-### status.json
-Contains the current operational status of the Immunity platform.
-
-### blocklist.json
-Maintains a list of blocked entities for security purposes.
-
-### certs.json
-Stores certificate information used by the Immunity platform.
-
-## Usage
-
-All data files are accessible via the repository and can be consumed by Immunity clients.
-
-## Validation
-
-All JSON files are automatically validated on each commit to ensure data integrity. 
+### `blocklist.json`
+```json
+[
+  { "domain": "malicious-domain.com" }
+]
+```

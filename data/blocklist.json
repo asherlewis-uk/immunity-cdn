@@ -1,14 +1,7 @@
-{
-  "version": "1.0.0",
-  "diff": "2026-02-12T12:00:00Z",
-  "domains": [
-    {
-      "domain": "stalkerware-test-example.com",
-      "threatCategory": "stalkerware_c2",
-      "severity": "low",
-      "firstSeen": "2026-02-12T12:00:00Z",
-      "lastUpdated": "2026-02-12T12:00:00Z",
-      "comment": "Placeholder for initialization"
-    }
-  ]
-}
+[
+  { "domain": "mspy.com" },
+  { "domain": "api.mspy.com" },
+  { "domain": "flexispy.com" },
+  { "domain": "api.flexispy.com" },
+  { "domain": "cocospy.com" }
+]

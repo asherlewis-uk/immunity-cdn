@@ -1,14 +1,7 @@
 {
-  "minVersion": "1.0.0",
-  "currentVersion": "1.0.0",
-  "releaseDate": "2026-02-12T12:00:00Z",
-  "securityBulletin": {
-    "criticalUpdate": false,
-    "severity": "low",
-    "bulletinTitle": "Systems Nominal",
-    "bulletinMessage": "Immunity protection is active.",
-    "actionUrl": ""
-  },
-  "maintenanceMode": false,
-  "maintenanceMessage": ""
+  "minVersion": "0.1.0",
+  "criticalUpdate": false,
+  "bulletinTitle": "System Initialized. Shield Active.",
+  "bulletinMessage": "All systems nominal. Immunity v0.1.0 is operational. Threat intelligence is current as of 2026-02-14.",
+  "severity": "info"
 }

@@ -1,42 +1,12 @@
 [
-  {
-    "packageName": "com.whatsapp",
-    "signature": "38A0F7D505FE18FEC64FBF343ECAAAF310D79987504067FA86D710E97897228D"
-  },
-  {
-    "packageName": "com.google.android.gms",
-    "signature": "F0FD6C5B410F25CB25C3B5334DD3892F050759080A90680072C2250965306B33"
-  },
-  {
-    "packageName": "com.google.android.apps.messaging",
-    "signature": "7CE83C1B71F3D572FED04C8D40C5CB10FF75E6D87D9DF6FBD53F0A3C4E2C5D01"
-  },
-  {
-    "packageName": "com.google.android.dialer",
-    "signature": "85D8EE4F80A0CC7AD3EA43A9BFA80F9B75D72F6CA42A9BB0DE46E05F2E349C67"
-  },
-  {
-    "packageName": "com.facebook.katana",
-    "signature": "A4B745436905513AC43E9E4E3F8312E60777BE140EC1A005AE18083293188A9B"
-  },
-  {
-    "packageName": "com.instagram.android",
-    "signature": "BCED6E2594E1B0D8CB22E16C4B1A3A633DBFBCAE0FAEE9ECEEE25E4C12E65B00"
-  },
-  {
-    "packageName": "org.thoughtcrime.securesms",
-    "signature": "29F34E5F27F211B424BC5BF9D67162C0EAFBA2DA35AF35C16416FC446C17ABCB"
-  },
-  {
-    "packageName": "org.telegram.messenger",
-    "signature": "B1EF83DFC3E5D3AE43C16F3E42493DF6C2A614A1FE4075C2F36C4F2E0E50A210"
-  },
-  {
-    "packageName": "com.samsung.android.messaging",
-    "signature": "34DF0E7A9F1CF1892E45C056B4973CD81CCEBFC3B4F0E2D3A35A6B78DB5B54C1"
-  },
-  {
-    "packageName": "com.microsoft.teams",
-    "signature": "23D3B82F3DBAB89B672D8C06DA81F5A0A59224B2C66E56E6A455F0445B8F2C12"
-  }
+  { "packageName": "com.whatsapp", "signature": "38A0F7D505FE18FEC64FBF343ECAAAF310D79987504067FA86D710E97897228D" },
+  { "packageName": "com.google.android.gms", "signature": "F0FD6C5B410F25CB25C3B5334DD3892F050759080A90680072C2250965306B33" },
+  { "packageName": "com.facebook.katana", "signature": "A4B745436905513AC43E9E4E3F8312E60777BE140EC1A005AE18083293188A9B" },
+  { "packageName": "com.instagram.android", "signature": "BCED6E2594E1B0D8CB22E16C4B1A3A633DBFBCAE0FAEE9ECEEE25E4C12E65B00" },
+  { "packageName": "com.google.android.apps.messaging", "signature": "7CE83C1B71F3D572FED04C8D40C5CB10FF75E6D87D9DF6FBD53F0A3C4E2C5D01" },
+  { "packageName": "com.google.android.dialer", "signature": "85D8EE4F80A0CC7AD3EA43A9BFA80F9B75D72F6CA42A9BB0DE46E05F2E349C67" },
+  { "packageName": "org.thoughtcrime.securesms", "signature": "29F34E5F27F211B424BC5BF9D67162C0EAFBA2DA35AF35C16416FC446C17ABCB" },
+  { "packageName": "org.telegram.messenger", "signature": "B1EF83DFC3E5D3AE43C16F3E42493DF6C2A614A1FE4075C2F36C4F2E0E50A210" },
+  { "packageName": "com.samsung.android.messaging", "signature": "34DF0E7A9F1CF1892E45C056B4973CD81CCEBFC3B4F0E2D3A35A6B78DB5B54C1" },
+  { "packageName": "com.microsoft.teams", "signature": "23D3B82F3DBAB89B672D8C06DA81F5A0A59224B2C66E56E6A455F0445B8F2C12" }
 ]
